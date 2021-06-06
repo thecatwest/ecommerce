@@ -1,6 +1,9 @@
 // import Model class and DataTypes object from sequelize
 // Model class is created on project models from using extends keyword so that Category inherits all functionality of Model class
-const { Model, DataTypes } = require('sequelize');
+const {
+  Model,
+  DataTypes
+} = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
@@ -23,8 +26,10 @@ Category.init(
       // auto-increment
       autoIncrement: true
     },
-    {
-      define
+    // define column
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   // second object configures certain options for table
