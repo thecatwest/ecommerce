@@ -24,7 +24,11 @@ Category.init(
       autoIncrement: true
     },
     {
-      define
+      // define column
+      category_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     }
   },
   // second object configures certain options for table
